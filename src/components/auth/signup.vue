@@ -69,6 +69,9 @@
 </template>
 
 <script>
+//import axios
+import axios from 'axios';
+
   export default {
     data () {
       return {
@@ -102,7 +105,16 @@
           hobbies: this.hobbyInputs.map(hobby => hobby.value),
           terms: this.terms
         }
-        console.log(formData)
+        console.log(formData);
+        //use axios to send a post request to the firebase url
+        //params url of db  and json data
+        //async task which returns a promise
+
+        axios.post('https://vueaxios-7085c.firebaseio.com/users.json',formData)
+        .then(res=>console.log(res))
+        .catch(error=>console.log(error))
+
+
       }
     }
   }
