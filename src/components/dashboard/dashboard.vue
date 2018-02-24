@@ -22,7 +22,7 @@ import axios from 'axios'
     //created is a lifecycle hook of vuejs
     created(){
       //send get request
-      axios.get('https://vueaxios-7085c.firebaseio.com/users.json')
+      axios.get('/users.json')
       .then(res=>{
         console.log(res)
 

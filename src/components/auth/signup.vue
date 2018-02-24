@@ -110,7 +110,7 @@ import axios from 'axios';
         //params url of db  and json data
         //async task which returns a promise
 
-        axios.post('https://vueaxios-7085c.firebaseio.com/users.json',formData)
+        axios.post('/users.json',formData)
         .then(res=>console.log(res))
         .catch(error=>console.log(error))
 
